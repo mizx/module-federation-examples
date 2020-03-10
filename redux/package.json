@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "lerna run --scope @redux/* --parallel start",
+    "build": "lerna run --scope @redux/* build",
+    "serve": "lerna run --scope @redux/* --parallel serve"
+  }
+}
