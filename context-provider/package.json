@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "lerna run --scope @context-provider/* --parallel start",
+    "build": "lerna run --scope @context-provider/* build",
+    "serve": "lerna run --scope @context-provider/* --parallel serve"
+  }
+}

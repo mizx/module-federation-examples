@@ -9,6 +9,7 @@
   "workspaces": [
     "basic-host-remote/*",
     "bi-directional/*",
+    "context-provider/*",
     "self-healing/*",
     "server-side-rendering/*",
     "typescript/*"
