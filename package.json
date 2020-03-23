@@ -11,6 +11,7 @@
     "bi-directional/*",
     "context-provider/*",
     "nested/*",
+    "nextjs/*",
     "redux/*",
     "self-healing/*",
     "server-side-rendering/*",
