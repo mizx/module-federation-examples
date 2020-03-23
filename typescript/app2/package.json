@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-react": "^7.8.3",
-    "@babel/preset-typescript": "^7.8.3",
-    "@types/react": "^16.9.23",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-react": "^7.9.1",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "html-webpack-plugin": "git://github.com/ScriptedAlchemy/html-webpack-plugin#master",
     "serve": "^11.3.0",
     "typescript": "^3.8.3",
@@ -22,7 +22,7 @@
     "serve": "serve dist -p 3002"
   },
   "dependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
