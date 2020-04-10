@@ -29,17 +29,13 @@ module.exports = {
       library: { type: "var", name: "app2" },
       filename: "remoteEntry.js",
       exposes: {
-        Button: "./src/Button",
+        Example: "./src/Example",
       },
-      shared: ["react", "react-dom"].reduce((shared, packageName) => {
-        const version = require(packageName).version;
-        const key = `${packageName}-${version}`;
-
-        return {
-          ...shared,
-          [key]: packageName,
-        };
-      }, {}), // { 'react-16.13.1': 'react', 'react-dom-16.13.1': 'react-dom' }
+      shared: {
+        react: "react",
+        "react-dom": "react-dom",
+        [`lodash-${require("lodash").VERSION}`]: "lodash",
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

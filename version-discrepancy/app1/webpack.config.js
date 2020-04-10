@@ -30,15 +30,11 @@ module.exports = {
       remotes: {
         app2: "app2",
       },
-      shared: ["react", "react-dom"].reduce((shared, packageName) => {
-        const version = require(packageName).version;
-        const key = `${packageName}-${version}`;
-
-        return {
-          ...shared,
-          [key]: packageName,
-        };
-      }, {}), // { 'react-16.8.3': 'react', 'react-dom-16.8.3': 'react-dom' }
+      shared: {
+        react: "react",
+        "react-dom": "react-dom",
+        [`lodash-${require("lodash").VERSION}`]: "lodash",
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

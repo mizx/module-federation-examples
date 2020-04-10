@@ -1,15 +1,31 @@
+import { VERSION, nth } from "lodash";
+
 import React from "react";
 
-const RemoteButton = React.lazy(() => import("app2/Button"));
+const RemoteExample = React.lazy(() => import("app2/Example"));
 
-const App = () => (
-  <div>
-    <h1>Basic Host-Remote</h1>
-    <h2>App 1: React v{React.version}</h2>
-    <React.Suspense fallback="Loading Button">
-      <RemoteButton />
-    </React.Suspense>
-  </div>
-);
+const App = () => {
+  return (
+    <div>
+      <h1>App 1 Host</h1>
+      <p>Lodash v{VERSION}</p>
+      <p>
+        <code>
+          typeof lodash.nth
+          <br />
+          // => {typeof nth}
+        </code>
+        <br />
+        <br />
+        <em>
+          (<code>lodash.nth</code> not available until lodash@4.11)
+        </em>
+      </p>
+      <React.Suspense fallback="Loading Example">
+        <RemoteExample />
+      </React.Suspense>
+    </div>
+  );
+};
 
 export default App;

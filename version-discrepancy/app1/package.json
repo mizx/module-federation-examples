@@ -18,7 +18,8 @@
     "serve": "serve dist -p 3001"
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "lodash": "4.10.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
