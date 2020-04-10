@@ -15,7 +15,8 @@
     "redux/*",
     "self-healing/*",
     "server-side-rendering/*",
-    "typescript/*"
+    "typescript/*",
+    "version-discrepancy/*"
   ],
   "devDependencies": {
     "lerna": "^3.16.4"
