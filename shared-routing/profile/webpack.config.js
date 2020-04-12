@@ -7,13 +7,13 @@ module.exports = {
   mode: "development",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
-    port: 3000,
+    port: 3004,
     historyApiFallback: true,
     hot: false,
     hotOnly: false
   },
   output: {
-    publicPath: "http://localhost:3000/"
+    publicPath: "http://localhost:3004/"
   },
   module: {
     rules: [
@@ -24,31 +24,29 @@ module.exports = {
         options: {
           presets: ["@babel/preset-react"]
         }
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ]
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "shell",
-      library: { type: "var", name: "shell" },
+      name: "profile",
+      library: { type: "var", name: "profile" },
       filename: "remoteEntry.js",
       remotes: {
-        order: "order",
-        dashboard: "dashboard",
-        profile: 'profile'
+        shell: "shell"
       },
       exposes: {
-        Shell: "./src/Shell",
-        Service: "./src/Service"
+        ProfilePage: "./src/ProfilePage",
       },
-      shared: [
-        "react",
-        "react-dom",
-        "@material-ui/core",
-        "@material-ui/icons",
-        "react-router",
-        "react-router-dom"
-      ]
+      shared: ["react", "react-dom", "@material-ui/core", "@material-ui/icons"]
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html"

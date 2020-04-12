@@ -12,7 +12,7 @@ import {
 import {
   ChevronLeft as ChevronLeftIcon,
   Dashboard as DashboardIcon,
-  ShoppingCart as ShoppingCartIcon
+  ShoppingCart as ShoppingCartIcon,
 } from "@material-ui/icons";
 import clsx from "clsx";
 
