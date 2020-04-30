@@ -9,6 +9,7 @@
   "workspaces": [
     "basic-host-remote/*",
     "bi-directional/*",
+    "comprehensive-demo/*",
     "self-healing/*",
     "comprehensive-demo/*",
     "server-side-rendering/*",
